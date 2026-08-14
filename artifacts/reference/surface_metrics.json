@@ -1,0 +1,17 @@
+{
+  "accepted_quotes": 102,
+  "diagnostics": {
+    "butterfly_violations": 0,
+    "calendar_violations": 0,
+    "grid_points": 401,
+    "minimum_butterfly_density": 0.5769846291733419,
+    "minimum_calendar_spread": 0.047457086763036366,
+    "minimum_total_variance": 0.023649851927082396
+  },
+  "input_quotes": 104,
+  "iv_rmse_basis_points": 3.5847876306664097,
+  "iv_rmse_vol_points": 0.000358478763066641,
+  "rejection_counts": {
+    "wide_relative_spread": 2
+  }
+}

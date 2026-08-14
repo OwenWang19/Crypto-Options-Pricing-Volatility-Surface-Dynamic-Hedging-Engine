@@ -1,0 +1,64 @@
+{
+  "hedging": [
+    {
+      "average_trade_count": 0.0,
+      "average_transaction_cost": 0.0,
+      "average_turnover_notional": 0.0,
+      "expected_shortfall_05": -20852.12527949992,
+      "max_abs_reconciliation_error": 7.275957614183426e-12,
+      "mean_pnl": -495.0113786933873,
+      "paths": 250,
+      "pnl_p05": -14809.877684386833,
+      "pnl_std": 6989.000390294372,
+      "policy": "unhedged",
+      "std_reduction_vs_unhedged": 0.0
+    },
+    {
+      "average_trade_count": 164.112,
+      "average_transaction_cost": 99.56669506716841,
+      "average_turnover_notional": 331888.98355723947,
+      "expected_shortfall_05": -1348.0398331174483,
+      "max_abs_reconciliation_error": 6.616573955398053e-11,
+      "mean_pnl": -137.74396193204822,
+      "paths": 250,
+      "pnl_p05": -890.7373525652695,
+      "pnl_std": 502.609597803441,
+      "policy": "four_hour",
+      "std_reduction_vs_unhedged": 0.9280856245906903
+    },
+    {
+      "average_trade_count": 36.756,
+      "average_transaction_cost": 69.19634437123811,
+      "average_turnover_notional": 230654.48123746816,
+      "expected_shortfall_05": -1364.3045861778255,
+      "max_abs_reconciliation_error": 3.113598268100759e-11,
+      "mean_pnl": -105.76846226898184,
+      "paths": 250,
+      "pnl_p05": -1016.3825075968645,
+      "pnl_std": 543.5264992815239,
+      "policy": "five_delta_band",
+      "std_reduction_vs_unhedged": 0.9222311533940791
+    }
+  ],
+  "paths": 250,
+  "scope": "synthetic research benchmark; no claim of live tradability",
+  "seed": 17,
+  "steps_per_path": 180,
+  "surface": {
+    "accepted_quotes": 102,
+    "diagnostics": {
+      "butterfly_violations": 0,
+      "calendar_violations": 0,
+      "grid_points": 401,
+      "minimum_butterfly_density": 0.5769846291733419,
+      "minimum_calendar_spread": 0.047457086763036366,
+      "minimum_total_variance": 0.023649851927082396
+    },
+    "input_quotes": 104,
+    "iv_rmse_basis_points": 3.5847876306664097,
+    "iv_rmse_vol_points": 0.000358478763066641,
+    "rejection_counts": {
+      "wide_relative_spread": 2
+    }
+  }
+}
