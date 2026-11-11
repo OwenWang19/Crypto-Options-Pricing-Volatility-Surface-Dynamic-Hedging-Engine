@@ -100,6 +100,32 @@ def _fetch_command(args: argparse.Namespace) -> int:
     return 0
 
 
+def _download_historical_command(args: argparse.Namespace) -> int:
+    from crypto_options.marketdata.historical import download_historical_data
+
+    manifest = download_historical_data(Path(args.raw_dir))
+    print(json.dumps(manifest, indent=2))
+    return 0
+
+
+def _historical_command(args: argparse.Namespace) -> int:
+    from crypto_options.research.historical import run_historical_research
+
+    manifest = run_historical_research(
+        Path(args.raw_dir), Path(args.out_dir), with_surface=not args.skip_surface
+    )
+    print(
+        json.dumps(
+            {
+                key: manifest[key]
+                for key in ("scope", "cases", "selected_band", "surface_validation")
+            },
+            indent=2,
+        )
+    )
+    return 0
+
+
 def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         prog="crypto-options",
@@ -139,6 +165,20 @@ def build_parser() -> argparse.ArgumentParser:
     fetch.add_argument("--timeout", type=float, default=10.0)
     fetch.add_argument("--output", default="artifacts/deribit_snapshot.csv")
     fetch.set_defaults(handler=_fetch_command)
+
+    download = subparsers.add_parser("download-historical", help="download pinned real datasets")
+    download.add_argument("--raw-dir", default="data/raw")
+    download.set_defaults(handler=_download_historical_command)
+
+    historical = subparsers.add_parser("backtest-historical", help="replay real historical quotes")
+    historical.add_argument("--raw-dir", default="data/raw")
+    historical.add_argument("--out-dir", default="artifacts/historical")
+    historical.add_argument(
+        "--skip-surface",
+        action="store_true",
+        help="run only historical hedging; record SVI as not run",
+    )
+    historical.set_defaults(handler=_historical_command)
     return parser
 
 

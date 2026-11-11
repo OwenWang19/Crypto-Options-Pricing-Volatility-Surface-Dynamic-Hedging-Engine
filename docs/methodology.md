@@ -1,5 +1,10 @@
 # Methodology
 
+The original sections below describe the numerical/synthetic framework. For actual historical
+quote replay, BTC inverse premium/settlement accounting, chronological selection, execution lag
+and cost assumptions, see [historical protocol](historical_protocol.md). The historical hedger
+uses observed option mid IV; the SVI experiment is separate, not an integrated SVI hedger.
+
 ## 1. Conventions and instrument scope
 
 The core pricer treats a European option as an option on a forward with quote-currency value

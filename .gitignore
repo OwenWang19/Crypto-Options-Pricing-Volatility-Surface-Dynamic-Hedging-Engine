@@ -11,4 +11,11 @@ build/
 artifacts/*
 !artifacts/reference/
 !artifacts/reference/**
+!artifacts/historical/
+!artifacts/historical/**
+# Quote-level historical ledgers and personal interview notes stay local.
+artifacts/historical/event_ledger.csv.gz
+docs/historical_interview_guide.md
+data/raw/
+data/processed/
 .DS_Store

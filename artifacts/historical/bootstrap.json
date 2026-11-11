@@ -1,0 +1,16 @@
+{
+  "policy": "band_005",
+  "week_blocks": 14,
+  "paired_cases": 28,
+  "draws": 5000,
+  "seed": 20261111,
+  "std_difference_vs_hourly_bps_95pct": [
+    -1.703206081438361,
+    10.127186434347546
+  ],
+  "std_reduction_vs_unhedged_95pct": [
+    0.6478094264250083,
+    0.8989809182438978
+  ],
+  "caution": "Small sample; weekly blocks do not remove all serial dependence."
+}

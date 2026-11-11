@@ -1,5 +1,10 @@
 # Resume bullets
 
+**Scope of this legacy file:** the bullets below describe the original synthetic experiment only.
+For the subsequent real-data upgrade and defensible historical claims, see
+[`historical_methodology.md`](historical_methodology.md). Do not present the synthetic
+92.2% or 3.58 vol-bp figures as historical results.
+
 Use only metrics from the checked-in seed-17 reference run, and retain the word "synthetic" in an
 interview or project explanation.
 

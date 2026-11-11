@@ -1,0 +1,23 @@
+# Tested local Python 3.12 environment; run pip install -r this file, then pip install -e .
+# Other supported Python versions may need resolution from pyproject.toml instead.
+contourpy==1.4.0
+coverage==7.17.2
+cycler==0.12.1
+fonttools==4.68.0
+iniconfig==2.3.1
+kiwisolver==1.5.1
+matplotlib==3.11.2
+numpy==2.5.4
+packaging==26.3
+pandas==3.1.1
+pillow==13.0.0
+pluggy==1.7.0
+pyarrow==23.0.1
+Pygments==2.21.0
+pyparsing==3.3.3
+pytest==8.4.2
+pytest-cov==6.3.0
+python-dateutil==4.0.0
+ruff==0.17.4
+scipy==1.18.1
+tzdata==2026.6

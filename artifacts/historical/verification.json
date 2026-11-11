@@ -1,0 +1,31 @@
+{
+  "status": "passed",
+  "case_rows": 2268,
+  "entered_opportunities": 54,
+  "ledger_rows": 54420,
+  "ledger_groups": 324,
+  "max_independent_pnl_error_usd": 9.663381206337363e-11,
+  "max_cash_reconstruction_error_usd": 7.275957614183426e-11,
+  "source_hashes_verified": 21,
+  "raw_files_verified": 9,
+  "surface_status_counts_verified": {
+    "safe_on_grid": 12,
+    "fit_failed": 9,
+    "unsafe_on_grid": 6
+  },
+  "artifact_sha256": {
+    "bootstrap.json": "ec4740f05f27fd59928bf46019b41f2ff79a690ae47779f2ccbe738f2479bf92",
+    "case_results.csv": "14038a46e1d77466bf443701bd2803231ad2d38c7545b94625f4ba3888fb3721",
+    "data_audit.json": "e06c5f9d3665832ead644f3b43bf15670137d94c835c3f7bcb5231a6887fd841",
+    "event_ledger.csv.gz": "378f54502496e2b87b90901f64d34e264bf34de778830cab5a4d4cd70ebc45da",
+    "historical_holdout.png": "9951016b1a9705a6c100d2b658df36c90b2d5694bf730fddf11ef06c63b70266",
+    "opportunities.csv": "57a1893d4db7f66eafbebdbe2860863a353780cc51f6871ba5b32f3f7b845f65",
+    "policy_summary.csv": "49b2371b4e2a158c76cbc9dd6f7deaa2899bcdf9cbad5c6157865bb47f6e3292",
+    "real_svi_rejections.csv": "62c1ae1c040988a426551d3111bfa7dab035d50e952ae224207f3706f96ca0b3",
+    "real_svi_residuals.csv": "cacd63782d17dd92cdbe166496b556992fa1da517b35c9ee134f6dcca9581ca4",
+    "real_svi_validation.csv": "87061f8a5370daf74865fa9755fa495434b9224667d2a51ea3456145bc0f2421",
+    "reproduction.json": "e3cd158fffbcd9beec9df4d43c933d58e8a1f418177401092eb3f131af818760",
+    "run_manifest.json": "139ad4da15f99bb4efcdab3462bb2a96e0571b34abdbbf968879050cead954e9"
+  },
+  "interpretation": "Accounting and provenance passed; this does NOT prove feasible fills."
+}

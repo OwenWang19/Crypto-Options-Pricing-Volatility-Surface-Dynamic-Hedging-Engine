@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "performed_on": "2026-11-11",
+  "scope": "Fresh offline historical hedge replay from the same pinned raw files; SVI not rerun during this repeat check",
+  "repeat_command": "MPLCONFIGDIR=/tmp/crypto-options-mpl crypto-options backtest-historical --skip-surface --out-dir artifacts/reproduction_check",
+  "byte_identical_outputs": {
+    "case_results.csv": "14038a46e1d77466bf443701bd2803231ad2d38c7545b94625f4ba3888fb3721",
+    "policy_summary.csv": "49b2371b4e2a158c76cbc9dd6f7deaa2899bcdf9cbad5c6157865bb47f6e3292",
+    "event_ledger.csv.gz": "378f54502496e2b87b90901f64d34e264bf34de778830cab5a4d4cd70ebc45da",
+    "historical_holdout.png": "9951016b1a9705a6c100d2b658df36c90b2d5694bf730fddf11ef06c63b70266"
+  },
+  "interpretation": "Reproducibility under fixed inputs, source and environment; not independent market validation or proof of tradability"
+}

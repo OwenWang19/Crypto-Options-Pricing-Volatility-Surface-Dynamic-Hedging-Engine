@@ -1,0 +1,264 @@
+{
+  "scope": "Real historical L1 option quotes and real spot prices; simulated executions",
+  "protocol": "docs/historical_protocol.md",
+  "data": {
+    "downloaded_at_utc": "2026-11-11T09:25:24.735953+00:00",
+    "option_source_article": "https://insights.deribit.com/education/option-backtest-selling-weekend-vol/",
+    "option_source_author": "https://x.com/cryptarbitrage/status/1817888742650085616",
+    "source_type": "third-party recorded Deribit hourly snapshots; not exchange-audited",
+    "files": [
+      {
+        "file": "btc_option_data_toshare.parquet",
+        "url": "https://drive.usercontent.google.com/download?id=1g9p2Kq8op40y4ZFQQ9AJw8a9CaDThOY8&export=download",
+        "bytes": 57453783,
+        "sha256": "6ed2162288d177d3c3a5443456c3fb78ed2c175249f0a0ff1665a5dd9c89800b"
+      },
+      {
+        "file": "BTCUSDT-1m-2024-01.zip",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2024-01.zip",
+        "bytes": 2169570,
+        "sha256": "40b78258091a468f8756843f207f5913eafc1d6e756c40a78711320d93fa5e75"
+      },
+      {
+        "file": "BTCUSDT-1m-2024-02.zip",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2024-02.zip",
+        "bytes": 2013843,
+        "sha256": "431132e0db8b9fe6e5c93c8e9ba3ae37dbcfa0edcdd57618b1b78ac18d14be79"
+      },
+      {
+        "file": "BTCUSDT-1m-2024-03.zip",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2024-03.zip",
+        "bytes": 2221094,
+        "sha256": "a9af86295eae839f1d072643c67eed7fcc47bb1d82c12ef312d041eec9511e7b"
+      },
+      {
+        "file": "BTCUSDT-1m-2024-04.zip",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2024-04.zip",
+        "bytes": 2120723,
+        "sha256": "753040cbfaa72bf9b1fdc6253a3b521a9a174a664dfd0929a556be327b016bc6"
+      },
+      {
+        "file": "BTCUSDT-1m-2024-05.zip",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2024-05.zip",
+        "bytes": 2144250,
+        "sha256": "0f709143f66a09acc430d24a5f27f9accd52689c23ce10f2c0b6ea26997bfa8a"
+      },
+      {
+        "file": "BTCUSDT-1m-2024-06.zip",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2024-06.zip",
+        "bytes": 2018857,
+        "sha256": "90f4fc3f55918787848c71f4cd0f2f1a5851bbffaf6392e76e9ab555b7479d2b"
+      },
+      {
+        "file": "BTCUSDT-1m-2024-07.zip",
+        "url": "https://data.binance.vision/data/spot/monthly/klines/BTCUSDT/1m/BTCUSDT-1m-2024-07.zip",
+        "bytes": 2141506,
+        "sha256": "9cfd749fd2027a0c6f261bed607b49dd1256369fb41b784934544a3676f8162e"
+      },
+      {
+        "file": "delivery_prices.json",
+        "url": "https://www.deribit.com/api/v2/public/get_delivery_prices",
+        "params": {
+          "index_name": "btc_usd",
+          "start_timestamp": 1704067200000,
+          "end_timestamp": 1722470400000,
+          "count": 100,
+          "pagination": "offset"
+        },
+        "bytes": 5546,
+        "sha256": "343a384311e82b0cd3b3f2e63cb8c78071805df453eedf526c76a814d2fbf02f"
+      }
+    ],
+    "redistribution": "Raw files are local only. No redistribution license assumed."
+  },
+  "data_audit": {
+    "raw_rows": 4498832,
+    "normalized_rows": 4498832,
+    "start_utc": "2024-01-13T19:00:14+00:00",
+    "end_utc": "2024-07-27T20:00:10+00:00",
+    "instruments": 14332,
+    "expiries": 209,
+    "null_counts": {
+      "snapshot_time": 0,
+      "instrument_name": 0,
+      "mark_price": 0,
+      "bid_price": 561115,
+      "ask_price": 423417,
+      "underlying_index": 0,
+      "underlying_price": 0,
+      "open_interest": 0,
+      "volume": 0,
+      "estimated_delivery_price": 13388,
+      "expiry_date": 0
+    },
+    "two_sided_rows": 3792137,
+    "missing_panel_hours": [
+      "2024-01-16T09:00:00+00:00",
+      "2024-03-09T09:00:00+00:00"
+    ],
+    "timestamp_assumption": "source naive snapshot_time and expiry_date are UTC",
+    "source_timestamp_is_not": "exchange quote update time; quote-age/depth unavailable",
+    "sha256": "6ed2162288d177d3c3a5443456c3fb78ed2c175249f0a0ff1665a5dd9c89800b"
+  },
+  "cases": 54,
+  "opportunities": 54,
+  "skipped_opportunities": 0,
+  "distinct_entry_weeks": 27,
+  "selected_band": "band_005",
+  "band_selection": "calibration-only normalized terminal-PnL RMSE; frozen for holdout",
+  "scenarios": [
+    {
+      "name": "baseline",
+      "spot_fee_bps": 5.0,
+      "spot_slippage_bps": 1.0,
+      "option_slippage_fraction": 0.01,
+      "option_fee_btc": 0.0003,
+      "delivery_fee_btc": 0.00015,
+      "fee_premium_cap": 0.125,
+      "execution_lag_minutes": 1,
+      "annual_borrow_rate": 0.0,
+      "max_delta_age_hours": 2.0
+    },
+    {
+      "name": "higher_spot_cost",
+      "spot_fee_bps": 10,
+      "spot_slippage_bps": 2,
+      "option_slippage_fraction": 0.01,
+      "option_fee_btc": 0.0003,
+      "delivery_fee_btc": 0.00015,
+      "fee_premium_cap": 0.125,
+      "execution_lag_minutes": 1,
+      "annual_borrow_rate": 0.0,
+      "max_delta_age_hours": 2.0
+    },
+    {
+      "name": "stress_cost",
+      "spot_fee_bps": 20,
+      "spot_slippage_bps": 5,
+      "option_slippage_fraction": 0.05,
+      "option_fee_btc": 0.0003,
+      "delivery_fee_btc": 0.00015,
+      "fee_premium_cap": 0.125,
+      "execution_lag_minutes": 1,
+      "annual_borrow_rate": 0.0,
+      "max_delta_age_hours": 2.0
+    },
+    {
+      "name": "lag_2m",
+      "spot_fee_bps": 5.0,
+      "spot_slippage_bps": 1.0,
+      "option_slippage_fraction": 0.01,
+      "option_fee_btc": 0.0003,
+      "delivery_fee_btc": 0.00015,
+      "fee_premium_cap": 0.125,
+      "execution_lag_minutes": 2,
+      "annual_borrow_rate": 0.0,
+      "max_delta_age_hours": 2.0
+    },
+    {
+      "name": "lag_5m",
+      "spot_fee_bps": 5.0,
+      "spot_slippage_bps": 1.0,
+      "option_slippage_fraction": 0.01,
+      "option_fee_btc": 0.0003,
+      "delivery_fee_btc": 0.00015,
+      "fee_premium_cap": 0.125,
+      "execution_lag_minutes": 5,
+      "annual_borrow_rate": 0.0,
+      "max_delta_age_hours": 2.0
+    },
+    {
+      "name": "borrow_5pct",
+      "spot_fee_bps": 5.0,
+      "spot_slippage_bps": 1.0,
+      "option_slippage_fraction": 0.01,
+      "option_fee_btc": 0.0003,
+      "delivery_fee_btc": 0.00015,
+      "fee_premium_cap": 0.125,
+      "execution_lag_minutes": 1,
+      "annual_borrow_rate": 0.05,
+      "max_delta_age_hours": 2.0
+    },
+    {
+      "name": "borrow_10pct",
+      "spot_fee_bps": 5.0,
+      "spot_slippage_bps": 1.0,
+      "option_slippage_fraction": 0.01,
+      "option_fee_btc": 0.0003,
+      "delivery_fee_btc": 0.00015,
+      "fee_premium_cap": 0.125,
+      "execution_lag_minutes": 1,
+      "annual_borrow_rate": 0.1,
+      "max_delta_age_hours": 2.0
+    }
+  ],
+  "surface_validation": {
+    "snapshots_attempted": 27,
+    "status_counts": {
+      "safe_on_grid": 12,
+      "fit_failed": 9,
+      "unsafe_on_grid": 6
+    },
+    "held_out_design": "internal strikes, calls and puts grouped; not a temporal forecast",
+    "primary_hedger_uses_svi": false,
+    "side_selection": "OTM calls and puts by forward moneyness; min normalized vega 0.001"
+  },
+  "bootstrap": {
+    "policy": "band_005",
+    "week_blocks": 14,
+    "paired_cases": 28,
+    "draws": 5000,
+    "seed": 20261111,
+    "std_difference_vs_hourly_bps_95pct": [
+      -1.703206081438361,
+      10.127186434347546
+    ],
+    "std_reduction_vs_unhedged_95pct": [
+      0.6478094264250083,
+      0.8989809182438978
+    ],
+    "caution": "Small sample; weekly blocks do not remove all serial dependence."
+  },
+  "source_sha256": {
+    "crypto_options/__init__.py": "7c16395ce36b20637ef517211ee69ca3abb9ec4d59172e123dd63f8599892264",
+    "crypto_options/cli.py": "31408b81d26b2cdc43a31002fc632362302eb1840c4fce781574776d3588c084",
+    "crypto_options/hedging/__init__.py": "6b840039b774080bac253dc4c7b7c53678cd8aa8b82047fd048c954fd8cd51c4",
+    "crypto_options/hedging/historical.py": "5efa6b6c66f67a87599700026bebd88dafcab73a0b02f0d16fd021b039b617e8",
+    "crypto_options/hedging/paths.py": "9a1b468f3007512e89be70e44c3f45c85353c88346fa11435e43adfeeceaae4f",
+    "crypto_options/hedging/simulator.py": "7ff4f4bf1af6b8fdfdfcc60fa531ccd457aed363c4de8a7f7a7bcd9957af1366",
+    "crypto_options/instruments.py": "adf5c703c5d0043df9b5873a796e9225f9ea6acca93ec21aecb8adfbe7a56301",
+    "crypto_options/marketdata/__init__.py": "2bd4cff35932faf78eb21673282a62de0d8db319fdc37ecda8a7042b54357bc3",
+    "crypto_options/marketdata/chain.py": "b16c55c1255cfc1cba23987ee09581eba2cd4406bf6711e3f4eca63e9f3e5b72",
+    "crypto_options/marketdata/deribit.py": "6852e9f774bf838da87ca86a96cf21bf1f8f750c28d280082b22c51f17b751ed",
+    "crypto_options/marketdata/historical.py": "f3b04fe9b06f9ee0e6a6fed4ffc5af2fa54e9244ced6cf6df65e56353a407878",
+    "crypto_options/pricing/__init__.py": "7bfe3208c548df2ff37bfdeefa1665c289c9026275fb7b6e07cd52aeb2fa1f02",
+    "crypto_options/pricing/black76.py": "a6b5beea8c73c12dd054dcf7781691184cdc9c70bc06dcf27bf0585bc559b6eb",
+    "crypto_options/products/__init__.py": "3294853119d920fd50621a42f8eba8e8294bb44d5a49c6b339dd5343d7699ac6",
+    "crypto_options/products/dual_currency.py": "847035a1f1395033f389e2f8fc7b31e76e03e1cd3694b51a73635f4cb38692eb",
+    "crypto_options/research/__init__.py": "76df092f17bcdee45914d937c9c46706b222c6e3515aaded11280d13c0d35900",
+    "crypto_options/research/experiments.py": "2825ae24ccb4365118690c774bac69f4883c0afd94efcb70508c21ca4d5536c5",
+    "crypto_options/research/historical.py": "ce6c86aa9ce547ceec259901b9ec2a1472de827fa4c988b53a4d4f81f2a4c64a",
+    "crypto_options/research/synthetic.py": "a7390de6523de6473f41a26f16d7f7c1fb525ecc587c8221d60f78a498161820",
+    "crypto_options/surface/__init__.py": "0e88694e63fd08c9cec322ea04d0a1fb6d030b827a78eb9c98c85a513a67b263",
+    "crypto_options/surface/svi.py": "978ed9085ded20e25e85fbe9f731d02cbc0a8f05d2be8f333d49932a00af6544"
+  },
+  "git_head": "9e50d8166b408e36a2093063663f38fefc2d237e",
+  "git_worktree_expected_dirty": true,
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "pandas": "3.1.1",
+    "pyarrow": "23.0.1",
+    "matplotlib": "3.11.2"
+  },
+  "claims_not_made": [
+    "guaranteed fills",
+    "historical L2 impact",
+    "audited PnL",
+    "capital returns",
+    "margin feasibility",
+    "live performance",
+    "independently preregistered out-of-sample alpha"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "raw_rows": 4498832,
+  "normalized_rows": 4498832,
+  "start_utc": "2024-01-13T19:00:14+00:00",
+  "end_utc": "2024-07-27T20:00:10+00:00",
+  "instruments": 14332,
+  "expiries": 209,
+  "null_counts": {
+    "snapshot_time": 0,
+    "instrument_name": 0,
+    "mark_price": 0,
+    "bid_price": 561115,
+    "ask_price": 423417,
+    "underlying_index": 0,
+    "underlying_price": 0,
+    "open_interest": 0,
+    "volume": 0,
+    "estimated_delivery_price": 13388,
+    "expiry_date": 0
+  },
+  "two_sided_rows": 3792137,
+  "missing_panel_hours": [
+    "2024-01-16T09:00:00+00:00",
+    "2024-03-09T09:00:00+00:00"
+  ],
+  "timestamp_assumption": "source naive snapshot_time and expiry_date are UTC",
+  "source_timestamp_is_not": "exchange quote update time; quote-age/depth unavailable",
+  "sha256": "6ed2162288d177d3c3a5443456c3fb78ed2c175249f0a0ff1665a5dd9c89800b"
+}
